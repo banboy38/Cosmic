@@ -1,4 +1,5 @@
 <?php
+    header("Pragma: no-cache");
     header('Cache-Control: no-cache, must-revalidate');
     session_start();
 	session_unset();
@@ -30,14 +31,14 @@
       <form action="/Login/process.php" method="post">
 
       <div class="input">
-         <label for="name">Username</label>
-         <input type="text" name="username" id="name">
+         <label for="name"></label>
+         <input type="text" name="username" placeholder="Username" id="name">
          <span class="spin"></span>
       </div>
 
       <div class="input">
-         <label for="pass">Password</label>
-         <input type="password" name="pass" id="pass">
+         <label for="pass"></label>
+         <input type="password" name="pass" placeholder="Password" id="pass">
          <span class="spin"></span>
       </div>
 
@@ -56,28 +57,30 @@
 
       <div class="title">REGISTER</div>
 
+      <form method="post" action="/Login/regprocess.php">  
+      
       <div class="input">
-         <label for="regname">Username</label>
-         <input type="text" name="regname" id="regname">
+         <label for="regname"></label>
+         <input type="text" name="regname" placeholder="Username" id="regname">
          <span class="spin"></span>
       </div>
 
       <div class="input">
-         <label for="regpass">Password</label>
-         <input type="password" name="regpass" id="regpass">
+         <label for="regpass"></label>
+         <input type="password" name="regpass" placeholder="Password" id="regpass">
          <span class="spin"></span>
       </div>
 
       <div class="input">
-         <label for="reregpass">Repeat Password</label>
-         <input type="password" name="reregpass" id="reregpass">
+         <label for="reregpass"></label>
+         <input type="password" name="regpass2" placeholder="Repeat Password" id="reregpass">
          <span class="spin"></span>
       </div>
-
       <div class="button">
          <button><span>NEXT</span></button>
       </div>
 
+      </form>
 
    </div>
 
