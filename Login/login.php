@@ -1,6 +1,7 @@
 <?php
     header("Pragma: no-cache");
     header('Cache-Control: no-cache, must-revalidate');
+
     session_start();
 	session_unset();
 
@@ -60,7 +61,7 @@
       <form method="post" action="/Login/regprocess.php">
       
       <div class="input">
-         <label for="regpass"></label>
+         <label for="regmail"></label>
          <input type="text" name="regemail" placeholder="E-Mail" id="regemail">
          <span class="spin"></span>
       </div>    

@@ -12,6 +12,7 @@
 
      if($_POST["reguser"] == $row->user){
 
+        
         $flag = 1;
      
      }
@@ -25,10 +26,15 @@
      $mail = $_POST["regemail"];
 
      $func = mysqli_query($conn, "insert into people(user,pass,email) values('$name', '$word', '$mail')");
+            
+        $_SESSION["user"] = $name;
+        $_SESSION["status"] = "Active";
+        header("Location: /home.php");
+        exit;
+
+    
      
-     $_SESSION["status"] = "Active";
      
-     header("Location: /home.php");
     }
     
     else{
