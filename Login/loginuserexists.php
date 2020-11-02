@@ -27,6 +27,7 @@
    <div class="box">
 
       <div class="title">LOGIN</div>
+      <div style="color:red">Username already exists</div>
 
       <form action="/Login/process.php" method="post">
 
@@ -76,7 +77,6 @@
          <input type="password" name="regpass" placeholder="Password" id="regpass">
          <span class="spin"></span>
       </div>
-
       
       <div class="button">
          <button><span>NEXT</span></button>

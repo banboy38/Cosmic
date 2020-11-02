@@ -20,7 +20,7 @@
 
     $_SESSION["status"]="Active";    
     
-    header("Location:/home.html");
+    header("Location:/home.php");
        
     $flag = 0;
     
@@ -31,7 +31,7 @@
 
     if($flag == 1)
     {
-    header("Location: /Login/login.php");
+    header("Location: /Login/loginwrong.php");
     exit;
     }   
 
