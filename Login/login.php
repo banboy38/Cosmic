@@ -1,11 +1,14 @@
 <?php
     header("Pragma: no-cache");
     header('Cache-Control: no-cache, must-revalidate');
-
+    
     session_start();
-	session_unset();
+    if($_SESSION["status"] == "Active"){
+        header("Location: /home.php");
+    }
+    
 
-    $_SESSION["status"] = "Passive";
+    $_SESSION["status"] == "Passive";
 ?>
 
 <!DOCTYPE html>
