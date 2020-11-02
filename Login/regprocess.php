@@ -9,7 +9,7 @@
      $word = $_POST["regpass"];
      $mail = $_POST["regemail"];
 
-     mysqli_query($conn, "insert into table values('ban','hal', 'Criminal12!!')");
+     $func = mysqli_query($conn, "insert into people(user,pass,email) values('ase', 'word', 'wamail')");
 
      $_SESSION["status"] = "Active";
 
