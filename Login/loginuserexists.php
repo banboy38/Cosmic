@@ -57,6 +57,7 @@
       <div class="material-button alt-2"><span class="shape"></span></div>
 
       <div class="title">REGISTER</div>
+      <div class="spin" style="color:red">Username already exists</div>
 
       <form method="post" action="/Login/regprocess.php">
       
