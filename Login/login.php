@@ -57,11 +57,17 @@
 
       <div class="title">REGISTER</div>
 
-      <form method="post" action="/Login/regprocess.php">  
+      <form method="post" action="/Login/regprocess.php">
+      
+      <div class="input">
+         <label for="regpass"></label>
+         <input type="text" name="regemail" placeholder="E-Mail" id="regemail">
+         <span class="spin"></span>
+      </div>    
       
       <div class="input">
          <label for="regname"></label>
-         <input type="text" name="regname" placeholder="Username" id="regname">
+         <input type="text" name="reguser" placeholder="Username" id="reguser">
          <span class="spin"></span>
       </div>
 
@@ -71,11 +77,7 @@
          <span class="spin"></span>
       </div>
 
-      <div class="input">
-         <label for="reregpass"></label>
-         <input type="password" name="regpass2" placeholder="Repeat Password" id="reregpass">
-         <span class="spin"></span>
-      </div>
+      
       <div class="button">
          <button><span>NEXT</span></button>
       </div>
