@@ -1,5 +1,5 @@
 <?php
-     include("cconnection.php");
+     include("connection.php");
      $sql = "select * from people";
 
      session_start();
