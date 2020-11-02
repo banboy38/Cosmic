@@ -28,7 +28,7 @@
      
      $_SESSION["status"] = "Active";
      
-     header("Location: /home.html");
+     header("Location: /home.php");
     }
     
     else{
