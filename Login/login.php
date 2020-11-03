@@ -8,7 +8,7 @@
     }
     
     else
-    $_SESSION["status"] == "Passive";
+    $_SESSION["status"] = "Passive";
 ?>
 
 <!DOCTYPE html>
