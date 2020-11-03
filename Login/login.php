@@ -3,11 +3,11 @@
     header('Cache-Control: no-cache, must-revalidate');
     
     session_start();
-    if($_SESSION["status"] == "Active"){
+    if(isset($_SESSION["status"]) && $_SESSION["status"] == "Active"){
         header("Location: /home.php");
     }
     
-
+    else
     $_SESSION["status"] == "Passive";
 ?>
 
