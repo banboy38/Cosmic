@@ -19,7 +19,7 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=latin,latin-ext'><link rel="stylesheet" href="./style.css">
 
 </head>
-<body style="background:#ED2553">
+<body style="background-image:url(mountain.jpg)">
 <!-- partial:index.partial.html -->
 <div class="materialContainer">
 

@@ -20,15 +20,22 @@
   <meta charset="UTF-8">
   <title>Login/Signup</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=latin,latin-ext'><link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=latin,latin-ext'><link rel="stylesheet" href="./style.css">
 
+  <style>
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+         color: grey;
+                     /* Firefox */
+      }
+  </style>  
+  
 </head>
-<body style="background:#ED2553">
+<body style="background-image:url(mountain.jpg)">
 <!-- partial:index.partial.html -->
 <div class="materialContainer">
 
 
-   <div class="box">
+   <div class="box" style="width:100%">
 
       <div class="title">LOGIN</div>
 
