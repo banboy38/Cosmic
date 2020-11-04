@@ -3,8 +3,9 @@
     header('Cache-Control: no-cache, must-revalidate');
     
     session_start();
+
     if(isset($_SESSION["status"]) && $_SESSION["status"] == "Active"){
-        header("Location: /home.php");
+        header("Location: /index.php");
     }
     
     else
@@ -18,6 +19,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  
   <title>Login/Signup</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=latin,latin-ext'><link rel="stylesheet" href="./style.css">
