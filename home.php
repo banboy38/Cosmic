@@ -24,7 +24,18 @@
            <div class="jumbotron">
                <h2 class="display-4">Welcome <?php echo $_SESSION["user"] ?>.</h2>
            </div> 
-   
+
+
+
+           <form action="/DeleteAccount/deluser.php" method="post">
+               Are you sure? Enter the password to confirm.
+               <input type="password" name="pass" />
+               <button>Delete</button>
+           </form>
+           <br />
+           <form action="/Login/logoutmech.php">
+               <button>Logout</button>
+           </form>
 
         </body>
 
