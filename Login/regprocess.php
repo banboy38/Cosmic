@@ -23,13 +23,14 @@
     if($flag == 0){
      $name = $_POST["reguser"];
      $word = $_POST["regpass"];
-     $mail = $_POST["regemail"];
+     $email = $_POST["regemail"];
 
-     $func = mysqli_query($conn, "insert into people(user,pass,email) values('$name', '$word', '$mail')");
+     $func = mysqli_query($conn, "insert into people(user,pass,email) values('$name', '$word', '$email')");
             
         $_SESSION["user"] = $name;
+        $_SESSION["email"] = $email;
         $_SESSION["status"] = "Active";
-        header("Location: /home.php");
+        header("Location: /index.php");
         exit;
 
     
