@@ -28,7 +28,7 @@ CREATE TABLE `people` (
   `pass` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `people` (
 
 LOCK TABLES `people` WRITE;
 /*!40000 ALTER TABLE `people` DISABLE KEYS */;
-INSERT INTO `people` VALUES (1,'banboy38','Elhamisthebest<3','anirbanhalder38@ymail.com'),(2,'babu','theSUNisalsoastar<3','ammanminz@gmail.com'),(3,'tanker','youngdumbbroke',NULL),(4,'mc420','bismillaharrahmanirrahim','ak124445@gmail.com');
+INSERT INTO `people` VALUES (1,'banboy38','Elhamisthebest<3','anirbanhalder38@ymail.com'),(2,'babu','theSUNisalsoastar<3','ammanminz@gmail.com'),(3,'tanker','youngdumbbroke',NULL),(6,'mc420','purty','ak124445@gmail.com'),(8,'elhaaaam____','frenchfries','elhamfaizy2808@gmail.com');
 /*!40000 ALTER TABLE `people` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-02 16:17:43
+-- Dump completed on 2020-11-05 17:17:05
