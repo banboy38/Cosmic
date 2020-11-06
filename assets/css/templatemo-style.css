@@ -58,11 +58,11 @@ button {
     transition: all 0.5s;
 }
 
-    .primary-button a:hover,
-    button:hover {
-        color: #fff;
-        background-color: #52057b;
-    }
+.primary-button a:hover,
+button:hover {
+    color: #fff;
+    background-color: #52057b;
+}
 
 section#search {
     border-bottom: none;
@@ -102,10 +102,9 @@ section {
     -ms-flex-shrink: 1;
     flex-shrink: 1;
     width: 100%;
-    
 }
 
-#main>.inner {    
+#main>.inner {
     padding: 100px;
 }
 
@@ -252,9 +251,9 @@ section {
     background-image: url(../images/icon_hover_06.png);
 }
 
-    .services .service-item:hover {
-        background-color: #52057b;
-    }
+.services .service-item:hover {
+    background-color: #52057b;
+}
 
 .services .service-item:hover h4,
 .services .service-item:hover p {
@@ -391,11 +390,11 @@ section.contact-form {
     margin-bottom: 40px;
 }
 
-    .contact-form input:focus {
-        outline: none;
-        box-shadow: none;
-        border-color: #52057b;
-    }
+.contact-form input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #52057b;
+}
 
 .contact-form textarea {
     font-size: 14px;
@@ -412,29 +411,29 @@ section.contact-form {
     margin-bottom: 40px;
 }
 
-    .contact-form textarea:focus {
-        outline: none;
-        box-shadow: none;
-        border-color: #52057b;
-    }
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #52057b;
+}
 
-    .contact-form button {
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        display: inline-block;
-        padding: 8px 20px;
-        color: #52057b;
-        background-color: transparent;
-        border: 2px solid #52057b;
-        transition: all 0.5s;
-        cursor: pointer;
-    }
+.contact-form button {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 8px 20px;
+    color: #52057b;
+    background-color: transparent;
+    border: 2px solid #52057b;
+    transition: all 0.5s;
+    cursor: pointer;
+}
 
-        .contact-form button:hover {
-            color: #fff;
-            background-color: #52057b;
-        }
+.contact-form button:hover {
+    color: #fff;
+    background-color: #52057b;
+}
 
 
 /* Tables */
@@ -1138,12 +1137,12 @@ section.buttons .container-fluid {
     #sidebar .toggle {
         width: 6em;
     }
-        #sidebar .toggle:before {
-            font-size: 1.5rem;
-            color: #fff;
-            background-color: #52057b;
-            opacity:0.7;
-        }
+    #sidebar .toggle:before {
+        font-size: 1.5rem;
+        color: #fff;
+        background-color: #52057b;
+        opacity: 0.7;
+    }
     body.wrapreload #sidebar {
         display: none;
     }
@@ -1179,17 +1178,17 @@ section.buttons .container-fluid {
     #sidebar .toggle:before {
         background-color: transparent;
     }
-        #sidebar .toggle:after {
-            background: #52057b;
-            opacity:0.9;
-            border-radius: 0;
-            content: '';
-            height: 60px;
-            left: 15px;
-            position: absolute;
-            top: 15px;
-            width: 80px;
-        }
+    #sidebar .toggle:after {
+        background: #52057b;
+        opacity: 0.9;
+        border-radius: 0;
+        content: '';
+        height: 60px;
+        left: 15px;
+        position: absolute;
+        top: 15px;
+        width: 80px;
+    }
     .left-image .right-content {
         margin-top: 40px;
         margin-left: 0px;
@@ -1451,4 +1450,48 @@ section.buttons .container-fluid {
     background-color: white;
     display: none;
     overflow: hidden;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #52057b;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #52057b;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    background-color: #fff;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
