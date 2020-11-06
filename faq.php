@@ -186,7 +186,7 @@ https://templatemo.com/tm-529-ramayana
                             <a href="index.php">WRITE BLOG</a>
                         </li>
                         <?php if($flag == 0){                     
-                        ?><li><a href="">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li><?php }
+                        ?><li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li><?php }
                          else if($flag == 1){
                         ?><li><a href="/Login/login.php">LOGIN/REGISTER</a></li><?php } ?>
                     </ul>
