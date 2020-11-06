@@ -30,6 +30,9 @@
         $_SESSION["user"] = $name;
         $_SESSION["email"] = $email;
         $_SESSION["status"] = "Active";
+       
+       
+
         header("Location: /index.php");
         exit;
 

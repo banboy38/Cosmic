@@ -93,7 +93,7 @@ https://templatemo.com/tm-529-ramayana
                                     <div class="panel" style="padding-top:10px;padding-bottom:10px">
                                         Lorem ipsum...
                                     </div>
-
+                                    
                                     <button class="accordion">Section 2</button>
                                     <div class="panel"  style="padding-top:10px;padding-bottom:10px">
                                         Lorem ipsum...
