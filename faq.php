@@ -81,14 +81,14 @@ https://templatemo.com/tm-529-ramayana
                                 <div class="section-heading">
                                     <h2 style="text-align:center; color:snow"> FREQUENTLY ASKED QUESTIONS</h2>
                                     
-                                    <button class="accordion">Section 1</button>
+                                    <button class="accordion">How does this site work?</button>
                                     <div class="panel" style="padding-top:10px;padding-bottom:10px">
-                                        Lorem ipsum...
+                                        Well, it's pretty easy. You enter a blog for the world to see....and we? We post it! Tidbits is a great platform to show the world your writing skills, it may open a new oppurtunity for you in your proffessional life, who knows!
                                     </div>
                                     
-                                    <button class="accordion">Section 2</button>
+                                    <button class="accordion">What is a  blog?</button>
                                     <div class="panel"  style="padding-top:10px;padding-bottom:10px">
-                                        Lorem ipsum...
+                                        A blog is an informal, diary like entry 
                                     </div>
 
                                     <button class="accordion">Section 3</button>
