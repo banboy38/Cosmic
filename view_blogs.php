@@ -153,10 +153,8 @@ https://templatemo.com/tm-529-ramayana
                                             <div class="primary-button">
 
                                                 <a href="#">SUBMIT</a>
-
-
                                             </div>
-                                        </div>
+                                    </div>
                                 </form>
                                 </div>
                                 <div class="col-md-6">
@@ -181,11 +179,23 @@ https://templatemo.com/tm-529-ramayana
                 <div class="inner" >
 
                     <!-- Search Box -->
-                    <section id="search" class="alt">
-                        <form method="get" action="#">
-                            <input type="text" name="search" id="search" placeholder="Search..." />
-                        </form>
-                    </section>
+                    <!-- Search Box -->
+                <nav>
+                <ul>
+                
+                   <h1 style="color:snow;margin-left:-45px;margin-top:30px" >
+                       <?php 
+                       if(isset($_SESSION["user"])) { 
+                            $dispname = $_SESSION["user"];
+                            echo "$dispname"; 
+                       } 
+                       else 
+                            echo "Guest"; 
+                    ?>
+                   </h1>
+                
+                </ul>
+                </nav>
 
                     <!-- Menu -->
                     <nav id="menu">

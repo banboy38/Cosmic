@@ -10,6 +10,16 @@
      }
     
 ?>
+                                            <?php
+                                                if(isset($_SESSION["del"]) && $_SESSION["del"] == 1){
+                                            ?>
+                                                <script>
+                                                    alert("Account deletion succesful!");
+                                                </script>
+                                            <?php 
+                                                unset($_SESSION['del']);
+                                                }
+                                            ?>
 
 
 
@@ -86,28 +96,28 @@
                                 <div class="service-item first-item">
 
                                     <h4>FIRST BLOG</h4>
-                                    <p>jo daalna hai ye p tag ke andar daalna and limit it to 4 lines i guess. and haan ye p tag ke andar daalne ka reason hai the font </p>
+                                    <p>Blog content</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="service-item second-item">
 
                                     <h4>SECOND BLOG</h4>
-                                    <p>jo daalna hai ye p tag ke andar daalna and limit it to 4 lines i guess. and haan ye p tag ke andar daalne ka reason hai the font.</p>
+                                    <p>Blog content</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="service-item third-item">
 
                                     <h4>THIRD BLOG</h4>
-                                    <p>jo daalna hai ye p tag ke andar daalna and limit it to 4 lines i guess. and haan ye p tag ke andar daalne ka reason hai the font</p>
+                                    <p>Blog content</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="service-item fourth-item">
 
                                     <h4>FOURTH BLOG</h4>
-                                    <p>jo daalna hai ye p tag ke andar daalna and limit it to 4 lines i guess. and haan ye p tag ke andar daalne ka reason hai the font</p>
+                                    <p>Blog content</p>
                                 </div>
                             </div>
                         </div>
@@ -169,12 +179,23 @@
             <div class="inner">
 
                 <!-- Search Box -->
-                <section id="search" class="alt">
-                    <form method="get" action="#">
-                        <input type="text" name="search" id="search" placeholder="Search..." />
-                    </form>
-                </section>
+                <nav>
+                <ul>
+                
+                   <h1 style="color:snow;margin-left:-45px;margin-top:30px" > 
+                    <?php 
+                       if(isset($_SESSION["user"])) { 
+                            $dispname = $_SESSION["user"];
+                            echo "$dispname"; 
 
+                       } 
+                       else 
+                            echo "Guest"; 
+                    ?> 
+                   </h1>
+                
+                </ul>
+                </nav>
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>

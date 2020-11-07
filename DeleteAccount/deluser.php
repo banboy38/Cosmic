@@ -12,24 +12,34 @@
 
      while($row = mysqli_fetch_object($result)){
 
-     if($_SESSION["user"] == $row->user && $_POST["pass"] == $row->pass){
+     if($_SESSION["user"] == $row->user && $_POST["passdel"] == $row->pass){
 
         $_SESSION["status"] = "Passive";
         $name = $_SESSION['user'];
         $func = mysqli_query($conn, "delete from people where user = '$name' ");
         unset($_SESSION['user']);
-        header("Location: /home.php");
+        unset($_SESSION['email']);
+
+        $_SESSION["del"] = 1;
+
+        header("Location: /myacc.php");
         $flag = 1;
         break;
      
      }
+        
     
      }
 
-     if($flag == 0)
-        header("Location : /home.php");
-        
 
+
+     if($flag == 0){
+
+        $_SESSION["del"] = 0;
+
+        header("Location : /myacc.php");
+        
+    }
    
     
    

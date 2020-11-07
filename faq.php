@@ -66,18 +66,10 @@ https://templatemo.com/tm-529-ramayana
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
+                
+                
 
-                <div class="col-md-12">
-                    <form method="get" action="#">
-                        <input type="text" name="search" class="form-control" class="search" placeholder="Search..." />
-                    </form>
-                </div>
-                <br>
-                <br>
+                
 
 
 
@@ -133,7 +125,7 @@ https://templatemo.com/tm-529-ramayana
                                 </div>
                                 <h4 style="text-align:center"> ENTER YOUR QUERIES BELOW </h4>
                                 <br><br>
-                                <form id="contact" action="" method="post">
+                                <form id="contact" action="Support/support.php" method="post">
 
                                     <div class="col-md-12">
                                         <fieldset>
@@ -148,7 +140,7 @@ https://templatemo.com/tm-529-ramayana
 
 
                                     <div class="col-12">
-                                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                        <textarea name="query" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
                                     </div>
                                     <div class="col-md-12">
                                         <button type="submit" id="form-submit" class="button">Send Message</button>
@@ -170,11 +162,23 @@ https://templatemo.com/tm-529-ramayana
             <div class="inner">
 
                 <!-- Search Box -->
-                <section id="search" class="alt">
-                    <form method="get" action="#">
-                        <input type="text" name="search" id="search" placeholder="Search..." />
-                    </form>
-                </section>
+                <!-- Search Box -->
+                <nav>
+                <ul>
+                
+                   <h1 style="color:snow;margin-left:-45px;margin-top:30px" >
+                       <?php 
+                       if(isset($_SESSION["user"])) { 
+                            $dispname = $_SESSION["user"];
+                            echo "$dispname"; 
+                       } 
+                       else 
+                            echo "Guest"; 
+                    ?>
+                   </h1>
+                
+                </ul>
+                </nav>
 
                 <!-- Menu -->
                 <nav id="menu">
@@ -223,6 +227,5 @@ https://templatemo.com/tm-529-ramayana
 </body>
 
 
-</body>
 
 </html>
