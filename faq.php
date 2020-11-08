@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     include "connection.php";
     
     session_start();
@@ -180,16 +180,16 @@ https://templatemo.com/tm-529-ramayana
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="view_blogs.html">VIEW BLOGS</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="view_blogs.php">VIEW BLOGS</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
                         <li>
-                            <a href="index.html">WRITE BLOG</a>
+                            <a href="index.php">WRITE BLOG</a>
                         </li>
                         <?php if($flag == 0){                     
                         ?><!--<li><a href="myacc.html">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>--><?php }
                          else if($flag == 1){
-                        ?><li><a href="/Login/login.html">LOGIN/REGISTER</a></li><?php } ?>
+                        ?><li><a href="/Login/login.php">LOGIN/REGISTER</a></li><?php } ?>
                     </ul>
                 </nav>
 
