@@ -10,13 +10,13 @@
      }
     
 ?>
-    <?php
+                                           <?php
                                                 if(isset($_SESSION["del"]) && $_SESSION["del"] == 1){
                                             ?>
         <!--  <script>
                                                     alert("Account deletion succesful!");
                                                 </script> -->
-        <?php 
+                                            <?php 
                                                 unset($_SESSION['del']);
                                                 }
                                             ?>
@@ -134,21 +134,22 @@
                                             <b><h2 style="color:snow" >WRITE YOUR BLOG</h2></b><br />
                                             <p style="color:snow">Enter your name:</p>
                                             <form>
-                                                <input type="text" id="fname" name="fname" size="50">
-                                            </form>
+                                                <input type="text" id="fname" class="form-control" name="fname" size="50">
+                                            
                                             <br>
                                             <p style="color:snow">Enter blog heading:</p>
-                                            <form>
-                                                <input type="text" id="fname" name="fname" size="70">
-                                            </form>
+                                            
+                                                <input type="text" id="fname" class="form-control" name="fname" size="70">
+                                            
                                             <br>
                                             <p style="color:snow">Enter your content:</p>
-                                            <form>
+                                            
                                                 <textarea name="blog" rows="6" class="form-control" id="blog" style="border-radius:0px"></textarea>
-                                            </form>
+                                            
                                             <div class="primary-button">
                                                 <a style="background:#52057b;color:snow;border-color:#52057b" href="#">POST</a>
                                             </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -221,7 +222,7 @@
                                 <?php } 
                          else if($flag == 1){
                             ?>
-                                <li><a href="/Login/login.html">LOGIN/REGISTER</a></li>
+                                <li><a href="/login.html">LOGIN/REGISTER</a></li>
                                 <?php } ?>
                             </ul>
                         </nav>
