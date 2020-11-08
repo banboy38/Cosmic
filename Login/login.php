@@ -41,7 +41,7 @@
 
       <div class="title">LOGIN</div>
 
-      <!--<form action="/Login/process.php" method="post"> -->
+      <form action="/Login/process.php" method="post">
 
       <div class="input">
          <label for="name"></label>
@@ -70,7 +70,7 @@
 
       <div class="title">REGISTER</div>
 
-     <!-- <form method="post" action="/Login/regprocess.php"> -->
+      <form method="post" action="/Login/regprocess.php">
       
       <div class="input">
          <label for="regmail"></label>

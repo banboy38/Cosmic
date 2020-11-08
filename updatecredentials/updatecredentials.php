@@ -47,34 +47,40 @@
                            $_SESSION["changeuser"] = 0;
                 }
                 
+
+                if(isset($_POST["username"]) && $_POST["username"] != null and $_POST["passu"] == $row->pass && $_SESSION["user"] == $row->user)
+                {   
+                $flag = 0;
+                $username = $_POST["username"];
+
+                while($roww = mysqli_fetch_object($db)){
+
+                    if($username == $roww->user or $_SESSION["user"] != $roww->user){
+        
+                        $flag = 1;
+     
+                    }
+
+     
+                }
+                if($flag == 0){
+
+                    mysqli_query($conn, "update people set user = '$username' where user = '{$_SESSION['user']}' ;");
+                    $_SESSION["user"] = $username;
+                    $_SESSION["changeuser"] = 1;                 
+          
+                }
+    
+                else if($flag == 1){
+                     $_SESSION["changeuser"] = 0;
+                }
+
+                }   
                     
 
         }  
 
-        if(isset($_POST["username"]) && $_POST["username"] != null)
-        {   
-            $flag = 0;
-            $username = $_POST["username"];
-
-            while($row = mysqli_fetch_object($db))
-            {
-                if($row->user == $username and $row->user != $_SESSION["user"])
-                {
-                    $flag = 1;
-                    break;
-                }
-                
-            }           
-             
-            if($flag == 0)
-            {          
-                mysqli_query($conn, "update people set user = '$username' where user = '{$_SESSION['user']}' ;");
-                $_SESSION["user"] = $username;
-                $_SESSION["changeuser"] = 1;
-            }
-            else if($flag == 1)
-                $_SESSION["changeuser"] = 0; 
-        }
+        
 
                   
                  
@@ -107,3 +113,23 @@
                     
 
                 } */
+
+
+/* while($row = mysqli_fetch_object($db))
+            {
+                if($username == $row->user and $_SESSION["user"] != $row->user)
+                {
+                    $flag = 1;
+                }
+                
+            }           
+             
+            if($flag == 0)
+            {          
+                mysqli_query($conn, "update people set user = '$username' where user = '{$_SESSION['user']}' ;");
+                $_SESSION["user"] = $username;
+                $_SESSION["changeuser"] = 1;
+            }
+            else if($flag == 1)
+                $_SESSION["changeuser"] = 0; 
+        } */

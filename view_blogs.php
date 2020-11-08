@@ -54,7 +54,7 @@ https://templatemo.com/tm-529-ramayana
                 <!-- Header -->
                 <header id="header">
                     <div class="logo">
-                        <a href="index.html">TIDBITS</a>
+                        <a href="index.php">TIDBITS</a>
                     </div>
                 </header>
                 <br>
@@ -62,7 +62,7 @@ https://templatemo.com/tm-529-ramayana
                 <section class="alt">
                     <div class="col-md-12">
                         <form method="get" action="#">
-                            <input type="text" name="search" class="form-control" class="search" placeholder="Search..." />
+                            <input type="text" name="search" class="form-control"  placeholder="Search..." />
                         </form>
                     </div>
                 </section>
@@ -200,16 +200,16 @@ https://templatemo.com/tm-529-ramayana
                     <!-- Menu -->
                     <nav id="menu">
                         <ul>
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="view_blogs.html">VIEW BLOGS</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="view_blogs.php">VIEW BLOGS</a></li>
+                            <li><a href="faq.php">FAQ</a></li>
                             <li>
-                                <a href="wb.html">WRITE BLOG</a>
+                                <a href="wb.php">WRITE BLOG</a>
                             </li>
                         <?php if($flag == 0){                     
-                        ?><!--<li><a href="myacc.html">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>--><?php }
+                        ?><li><a href="myacc.html">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li><?php }
                          else if($flag == 1){
-                        ?><li><a href="/Cosmic/Login/login.html">LOGIN/REGISTER</a></li><?php } ?>
+                        ?><li><a href="/Login/login.php">LOGIN/REGISTER</a></li><?php } ?>
                         </ul>
                     </nav>
 
@@ -246,6 +246,6 @@ https://templatemo.com/tm-529-ramayana
 </body>
 
 
-</body>
+
 
 </html>

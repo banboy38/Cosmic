@@ -13,9 +13,9 @@
                                            <?php
                                                 if(isset($_SESSION["del"]) && $_SESSION["del"] == 1){
                                             ?>
-        <!--  <script>
+                                                  <script>
                                                     alert("Account deletion succesful!");
-                                                </script> -->
+                                                </script>
                                             <?php 
                                                 unset($_SESSION['del']);
                                                 }
@@ -61,7 +61,7 @@
                         <!-- Header -->
                         <header id="header">
                             <div class="logo">
-                                <a href="index.html">TIDBITS</a>
+                                <a href="index.php">TIDBITS</a>
                             </div>
                         </header>
 
@@ -195,14 +195,14 @@
 
                                 <h1 style="color:snow;margin-left:-45px;margin-top:30px">
                                     <?php 
-                       if(isset($_SESSION["user"])) { 
-                            $dispname = $_SESSION["user"];
-                            echo "$dispname"; 
+                                    if(isset($_SESSION["user"])) { 
+                                        $dispname = $_SESSION["user"];
+                                        echo "$dispname"; 
 
-                       } 
-                       else 
-                            echo "Guest"; 
-                    ?>
+                                    } 
+                                    else 
+                                        echo "Guest"; 
+                                    ?>
                                 </h1>
 
                             </ul>
@@ -210,19 +210,19 @@
                         <!-- Menu -->
                         <nav id="menu">
                             <ul>
-                                <li><a href="index.html">HOME</a></li>
-                                <li><a href="view_blogs.html">VIEW BLOGS</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="index.php">HOME</a></li>
+                                <li><a href="view_blogs.php">VIEW BLOGS</a></li>
+                                <li><a href="faq.php">FAQ</a></li>
                                 <li>
-                                    <a href="wb.html">WRITE BLOG</a>
+                                    <a href="wb.php">WRITE BLOG</a>
                                 </li>
                                 <?php if($flag == 0){                     
-                           ?>
-                                <!--<li><a href="myacc.html">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>-->
+                                 ?>
+                                <li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>
                                 <?php } 
-                         else if($flag == 1){
-                            ?>
-                                <li><a href="/Cosmic/Login/login.html">LOGIN/REGISTER</a></li>
+                                 else if($flag == 1){
+                                ?>
+                                <li><a href="/Login/login.php">LOGIN/REGISTER</a></li>
                                 <?php } ?>
                             </ul>
                         </nav>

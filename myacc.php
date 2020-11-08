@@ -197,6 +197,12 @@ https://templatemo.com/tm-529-ramayana
                                                 <input name="username" type="text" class="form-control" id="name" placeholder="" required="">
                                             </fieldset>
                                             </div><br/>
+                                            <p>PASSWORD</p>
+                                            <div class="col-md-6">
+                                            <fieldset>
+                                                <input name="passu" type="password" class="form-control" id="name" placeholder="" required="">
+                                            </fieldset>
+                                            </div><br/>
                                             
                                             <div style="margin-left: 15px;" class="primary-button">
                                                <button>SUBMIT</button>

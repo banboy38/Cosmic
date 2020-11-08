@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     include "connection.php";
     
     session_start();
@@ -10,16 +10,6 @@
      }
     
 ?>
-                                              <?php
-                                                if(isset($_SESSION["del"]) && $_SESSION["del"] == 1){
-                                            ?>
-                                            <!--  <script>
-                                                    alert("Account deletion succesful!");
-                                                </script> -->
-                                             <?php 
-                                                unset($_SESSION['del']);
-                                                }
-                                            ?>
 
 
 
@@ -61,7 +51,7 @@
                         <!-- Header -->
                         <header id="header">
                             <div class="logo">
-                                <a href="index.html">TIDBITS</a>
+                                <a href="index.php">TIDBITS</a>
                             </div>
                         </header>
 
@@ -71,7 +61,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="right-content">
-                                            
+                                            <p style="color:snow">Submitting a blog is probably the easiest part of the site. Just enter the title of your blog, and get started with the content below. <br /> If you want to get a bit more creative and add a bit of a personal touch to your blogs, you can use basic html heading and editing tags. We've got a list of them below for those who aren't familiar with it - <br />1. <code><pre> <h1>[your content]</h1> </pre></code> </p>
                                          </div>
                                     </div>
                                 </div>
@@ -85,12 +75,9 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="right-content">
-                                            <b><h2 style="color:snow" >WRITE YOUR BLOG</h2></b><br />
-                                            <p style="color:snow">Enter your name:</p>
                                             <form>
-                                                <input type="text" id="fname"  class="form-control" name="fname" size="50">
+                                            <b><h2 style="color:snow" >WRITE YOUR BLOG</h2></b><br />
                                             
-                                            <br>
                                             <p style="color:snow">Enter blog heading:</p>
                                            
                                                 <input type="text" id="fname"  class="form-control" name="fname" size="70">
@@ -125,14 +112,14 @@
 
                                 <h1 style="color:snow;margin-left:-45px;margin-top:30px">
                                     <?php 
-                       if(isset($_SESSION["user"])) { 
-                            $dispname = $_SESSION["user"];
-                            echo "$dispname"; 
+                                    if(isset($_SESSION["user"])) { 
+                                        $dispname = $_SESSION["user"];
+                                        echo "$dispname"; 
 
-                       } 
-                       else 
-                            echo "Guest"; 
-                    ?>
+                                    } 
+                                    else 
+                                        echo "Guest"; 
+                                    ?>
                                 </h1>
 
                             </ul>
@@ -140,19 +127,19 @@
                         <!-- Menu -->
                         <nav id="menu">
                             <ul>
-                                <li><a href="index.html">HOME</a></li>
-                                <li><a href="view_blogs.html">VIEW BLOGS</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="index.php">HOME</a></li>
+                                <li><a href="view_blogs.php">VIEW BLOGS</a></li>
+                                <li><a href="faq.php">FAQ</a></li>
                                 <li>
-                                    <a href="wb.html">WRITE BLOG</a>
+                                    <a href="wb.php">WRITE BLOG</a>
                                 </li>
                                 <?php if($flag == 0){                     
-                           ?>
-                                <!--<li><a href="myacc.html">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>-->
+                                ?>
+                                <li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>
                                 <?php } 
-                         else if($flag == 1){
-                            ?>
-                                <li><a href="Cosmic/Login/login.html">LOGIN/REGISTER</a></li>
+                                    else if($flag == 1){
+                                ?>
+                                <li><a href="/Login/login.php">LOGIN/REGISTER</a></li>
                                 <?php } ?>
                             </ul>
                         </nav>

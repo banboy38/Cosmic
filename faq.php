@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     include "connection.php";
     
     session_start();
@@ -83,7 +83,7 @@ https://templatemo.com/tm-529-ramayana
                                     
                                     <button class="accordion">How does this site work?</button>
                                     <div class="panel" style="padding-top:10px;padding-bottom:10px">
-                                        Well, it's pretty easy. You enter a blog for the world to see....and we? We post it! Tidbits is a great platform to show the world your writing skills, it may open a new oppurtunity for you in your proffessional life, who knows!
+                                        Well, it's pretty easy. You enter a blog for the world to see....and we? We post it! Tidbits is a great platform to show the world your writing skills, it may open a new oppurtunity for you in your professional life, who knows!
                                     </div>
                                     
                                     <button class="accordion">What is a  blog?</button>
@@ -180,16 +180,16 @@ https://templatemo.com/tm-529-ramayana
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="view_blogs.html">VIEW BLOGS</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="view_blogs.php">VIEW BLOGS</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
                         <li>
-                            <a href="wb.html">WRITE BLOG</a>
+                            <a href="wb.php">WRITE BLOG</a>
                         </li>
                         <?php if($flag == 0){                     
-                        ?><!--<li><a href="myacc.html">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>--><?php }
+                        ?><li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li><?php }
                          else if($flag == 1){
-                        ?><li><a href="/Cosmic/Login/login.html">LOGIN/REGISTER</a></li><?php } ?>
+                        ?><li><a href="/Login/login.php">LOGIN/REGISTER</a></li><?php } ?>
                     </ul>
                 </nav>
 
