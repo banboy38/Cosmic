@@ -165,6 +165,24 @@ https://templatemo.com/tm-529-ramayana
                                                 <button>SUBMIT</button>
                                             </div>
                                         </form>
+                                            <?php
+                                                if(isset($_SESSION["namech"]) && $_SESSION["namech"] == 1){
+                                            ?>
+                                                <script>
+                                                    alert("Name has been succesfully changed!");
+                                                </script>
+                                            <?php 
+                                                unset($_SESSION['namech']);
+                                                }
+                                                else if(isset($_SESSION["namech"]) && $_SESSION["namech"] != 1){
+                                            ?>
+                                                <script>
+                                                    alert("Name couldn't be changed, wrong password!");
+                                                </script>
+                                            <?php
+                                                unset($_SESSION['namech']);
+                                                }
+                                            ?>
                                             
                                         </div>
 

@@ -17,38 +17,21 @@
                     $_SESSION["email"] = $email;
                     $_SESSION["changemail"] = 1;
                 }
-                else
+                else if(isset($_POST["passe"]) &&  $_POST["passe"] != $row->pass && $_SESSION["user"] == $row->user)
                     $_SESSION["changemail"] = 0;
                 
                 if(isset($_POST["passn"]) && $_POST["passn"] == $row->pass && $_SESSION["user"] == $row->user)
                 {
                     $name = $_POST["name"];
                     mysqli_query($conn, "update people set name = '$name' where user = '$row->user' ;");
-                     
+                    $_SESSION["namech"] = 1;                     
                 }
-                if($_SESSION["user"] == $row->user && isset($_POST["username"]) && $_POST["username"] != null)
+                else if(isset($_POST["passn"]) && $_POST["passn"] != $row->pass && $_SESSION["user"] == $row->user)
                 {
-                    $username = $_POST["username"];
-                    $flag = 0;
-                    
-                    while($bro = mysqli_fetch_object($db))
-                    {   
-                        
-                        if($bro->user == $username && $bro->user != $row->user)
-                            $flag = 1;
-                    }
-                        
-                        if($flag == 0){
-                           mysqli_query($conn, "update people set user = '$username' where user = '$row->user' ;");
-                           $_SESSION["user"] = $username;
-                           $_SESSION["changeuser"] = 1;
-                        }
-                        else
-                           $_SESSION["changeuser"] = 0;
-                    
-
+                    $_SESSION["namech"] = 0; 
                 }
-                    
+                
+                                   
 
 
 
@@ -67,9 +50,60 @@
                     
 
         }  
+
+        if(isset($_POST["username"]) && $_POST["username"] != null)
+        {   
+            $flag = 0;
+            $username = $_POST["username"];
+
+            while($row = mysqli_fetch_object($db))
+            {
+                if($row->user == $username and $row->user != $_SESSION["user"])
+                {
+                    $flag = 1;
+                    break;
+                }
+                
+            }           
+             
+            if($flag == 0)
+            {          
+                mysqli_query($conn, "update people set user = '$username' where user = '{$_SESSION['user']}' ;");
+                $_SESSION["user"] = $username;
+                $_SESSION["changeuser"] = 1;
+            }
+            else if($flag == 1)
+                $_SESSION["changeuser"] = 0; 
+        }
+
                   
                  
     } 
         header("Location: /myacc.php")   
     
 ?>
+
+
+/*if($_SESSION["user"] == $row->user && isset($_POST["username"]) && $_POST["username"] != null)
+                {
+                    $username = $_POST["username"];
+                    $flag = 0;
+                    
+                    while($bro = mysqli_fetch_object($db))
+                    {   
+                        
+                        if($bro->user == $username && $bro->user != $row->user)
+                            $flag = 1;
+                            break;
+                    }
+                        
+                        if($flag == 0){
+                           mysqli_query($conn, "update people set user = '$username' where user = '$row->user' ;");
+                           $_SESSION["user"] = $username;
+                           $_SESSION["changeuser"] = 1;
+                        }
+                        else
+                           $_SESSION["changeuser"] = 0;
+                    
+
+                } */
