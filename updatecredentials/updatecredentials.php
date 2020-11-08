@@ -75,8 +75,7 @@
                      $_SESSION["changeuser"] = 0;
                 }
 
-                }   
-                    
+                }                       
 
         }  
 

@@ -61,7 +61,17 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="right-content">
-                                            <p style="color:snow">Submitting a blog is probably the easiest part of the site. Just enter the title of your blog, and get started with the content below. <br /> If you want to get a bit more creative and add a bit of a personal touch to your blogs, you can use basic html heading and editing tags. We've got a list of them below for those who aren't familiar with it - <br />1. <code><pre> <h1>[your content]</h1> </pre></code> </p>
+                                            <p style="color:snow">
+                                                Submitting a blog is probably the easiest part of the site. Just enter the title of your blog, and get started with the content below. <br /> If you want to get a bit more creative and add a bit of a personal touch to your blogs, you can use basic html heading and editing tags. We've got a list of them below for those who aren't familiar with it - <br />
+                                                <br />1. &lt;i&gt;[Your Content]&lt;/i&gt; - Enclosing your text in this will add an <i>italic</i> style to it.
+                                                <br />2. &lt;b&gt;[Your Content]&lt;/b&gt; - Enclosing your text in this will add an <b>bold</b> style to it.
+                                                <br />3. &lt;u&gt;[Your Content]&lt;/u&gt; - Enclosing your text in this will add an <u>underlined</u> style to it.
+                                                <br />4. &lt;H1&gt;[Your Content]&lt;/H1&gt; - Enclosing your text in this will add a level 1 heading style to it.
+                                                <br />5. &lt;H2&gt;[Your Content]&lt;/H2&gt; - Enclosing your text in this will add a level 2 heading style to it.
+                                                <br />6. &lt;H3&gt;[Your Content]&lt;/H3&gt; - Enclosing your text in this will add a level 3 heading style to it.
+                                                <br />7. &lt;p&gt;[Your Content]&lt;/p&gt; - Enclosing your text in this will put the text into a separate paragraph.
+                                                
+                                            </p>
                                          </div>
                                     </div>
                                 </div>
@@ -75,20 +85,21 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="right-content">
-                                            <form>
+                                            <form method="get" action="/Blogs/blogaccept.php">
                                             <b><h2 style="color:snow" >WRITE YOUR BLOG</h2></b><br />
                                             
                                             <p style="color:snow">Enter blog heading:</p>
                                            
-                                                <input type="text" id="fname"  class="form-control" name="fname" size="70">
+                                                <input type="text" id="fname"  class="form-control" name="bheading" size="70">
                                            
                                             <br>
+
                                             <p style="color:snow">Enter your content:</p>
                                             
                                                 <textarea name="blog" rows="15" class="form-control" id="blog" style="border-radius:0px"></textarea>
                                             
                                             <div class="primary-button">
-                                                <button style="background:#52057b;color:snow;border-color:#52057b" href="#">POST</button>
+                                                <button style="background:#52057b;color:snow;border-color:#52057b">POST</button>
                                             </div>
                                             </form>
                                         </div>
