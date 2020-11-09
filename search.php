@@ -1,7 +1,7 @@
 <?php
     include "connection.php";
     
-    $sql = "select * from content;";    
+    $sql = "select * from content where heading like '%{$_GET['search']}%';";    
     $result = mysqli_query($conn, $sql);    
 
     session_start();
@@ -303,4 +303,3 @@ https://templatemo.com/tm-529-ramayana
 
 
 
-</html>
