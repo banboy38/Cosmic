@@ -65,10 +65,27 @@ https://templatemo.com/tm-529-ramayana
                 
 
                 <?php while($row = mysqli_fetch_object($result)){
-                ?>
-                        <!-- Simple Post -->
+                    
+                    if($row->id == $_GET["blogid"]){
+                ?>  
+                    
+                        <section class="simple-post" style="background-color:rgb(164, 54, 149);padding:40px;opacity:1;margin-top:-40px">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="down-content">
+                                            <h1 style="color:snow"><?php echo $row->heading; ?></h1>
+                                            <p style="color:snow"><?php echo nl2br($row->blog) ?></p>
+                                            <br />
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                 
                 <?php }
+                }
                 ?>
 
               <!--  <section class="simple-post"  style="background-color:rgb(164, 54, 149);padding:40px;opacity:1" >
@@ -192,9 +209,12 @@ https://templatemo.com/tm-529-ramayana
                             <li><a href="index.php">HOME</a></li>
                             <li><a href="view_blogs.php">VIEW BLOGS</a></li>
                             <li><a href="faq.php">FAQ</a></li>
+                            <?php if($flag == 0){                     
+                                 ?>
                             <li>
                                 <a href="wb.php">WRITE BLOG</a>
                             </li>
+                            <?php } ?>
                         <?php if($flag == 0){                     
                         ?><li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li><?php }
                          else if($flag == 1){
@@ -234,6 +254,6 @@ https://templatemo.com/tm-529-ramayana
         <script src="assets/js/custom.js"></script>
 </body>
 
-
+</html>
 
 

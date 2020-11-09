@@ -5,6 +5,8 @@
         
     mysqli_query($conn, "insert into content(user,email,blog,heading) values('{$_SESSION['user']}','{$_SESSION['email']}','{$_GET['blog']}','{$_GET['bheading']}');");
 
-    header("Location: /wb.php");
+    header("Location: /view_blogs.php");
+
+    $_SESSION["posted"] = 1;
     
 ?>

@@ -126,20 +126,39 @@
                         </section>
 
                         <!-- FIRSTBLOG -->
+                        
                         <section class="left-image" style="background-color:rgb(164, 54, 149);padding:30px;opacity:1">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="right-content">
+                                            <?php if($flag == 0){                     
+                                            ?>
+                                            <form method="get" action="/Blogs/blogaccept.php">
                                             <b><h2 style="color:snow" >WRITE YOUR BLOG</h2></b><br />
-                                            <p style="color:snow">Enter your name:</p>
-                                            <form>
-                                                <input type="text" id="fname" class="form-control" name="fname" size="50">
                                             
-                                            <br>
                                             <p style="color:snow">Enter blog heading:</p>
                                             
-                                                <input type="text" id="fname" class="form-control" name="fname" size="70">
+                                                <input type="text" id="fname" class="form-control" name="bheading" size="70" required="">
+                                            
+                                            <br>
+                                            <p style="color:snow">Enter your content:</p>
+                                            
+                                                <textarea name="blog" rows="6" class="form-control" id="blog" style="border-radius:0px" required=""></textarea>
+                                            
+                                            <div class="primary-button">
+                                                <button style="background:#52057b;color:snow;border-color:#52057b">POST</button>
+                                            </div>
+                                            </form>
+                                            <?php } 
+                                            else if($flag == 1){
+                                            ?>
+                                            <form >
+                                            <b><h2 style="color:snow" >WRITE YOUR BLOG</h2></b><br />
+                                            
+                                            <p style="color:snow">Enter blog heading:</p>
+                                            
+                                                <input type="text" id="fname" class="form-control" name="bheading" size="70">
                                             
                                             <br>
                                             <p style="color:snow">Enter your content:</p>
@@ -147,14 +166,23 @@
                                                 <textarea name="blog" rows="6" class="form-control" id="blog" style="border-radius:0px"></textarea>
                                             
                                             <div class="primary-button">
-                                                <a style="background:#52057b;color:snow;border-color:#52057b" href="#">POST</a>
+                                                <script>
+                                                    function func() {
+                                                        alert("Login first!");
+                                                    }
+                                                </script>
+
+                                                <button style="background:#52057b;color:snow;border-color:#52057b" onclick="func()">POST</button>
                                             </div>
                                             </form>
+                                            <?php } ?>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
+                        
 
                         <!-- SUBSCRIBE -->
                         <section class="right-image" style="background-color:rgb(164, 54, 149);padding:40px;opacity:1">

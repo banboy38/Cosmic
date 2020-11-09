@@ -11,8 +11,20 @@
      if(isset($_SESSION["status"]) && $_SESSION["status"] == "Active"){
         $flag = 0;
      }
+
+     if(isset($_SESSION["posted"]) && $_SESSION["posted"] == 1 ){
+     ?>
+    <!--  <script>
+          alert("Blog Posted!");
+      </script> -->
+     <?php
+
+     unset($_SESSION["posted"]);
+
+     }
+
     
-     $var = array();
+     
 ?>
 
 
@@ -63,13 +75,13 @@ https://templatemo.com/tm-529-ramayana
                 </header>
                 <br>
                 <!-- Search Box -->
-                <section class="alt">
+                
                     <div class="col-md-12">
                         <form method="get" action="#">
                             <input type="text" name="search" class="form-control"  placeholder="Search..." />
                         </form>
                     </div>
-                </section>
+                
 
                 <?php while($row = mysqli_fetch_object($result)){
                 ?>
@@ -96,14 +108,19 @@ https://templatemo.com/tm-529-ramayana
                                                                }
                                
                                                                echo implode(".", $arr);
+                                                               echo ".......";
                                                                
-                                                               array_push($var, $row->id);
+                                                              
                                                                
                                                 ?>
                                                 
-                                                <a style="font-size:13px;color:lightpink;" href="/Blogs/viewprocess.php">......read on</a>
-
+                                                
                                             </p>
+                                            <br />
+                                                <form style="text-align:center" method="get" action="/display.php">
+                                                    <input type="hidden" name="blogid" value="<?php echo $row->id ?>" />
+                                                    <button style="border-color:transparent;margin:0px;padding:10px;"><a style="font-size:13px;color:lightpink;">read blog</a></button>
+                                                </form>
                                         </div>
                                     </div>
                                 </div>

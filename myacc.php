@@ -9,6 +9,17 @@
         $flag = 0;
          
 ?>
+<?php
+ if(isset($_SESSION['bloggone']) && $_SESSION['bloggone'] == 1){
+?>
+    <script>
+        alert("Blog has been deleted!");
+    </script>
+
+<?php
+    unset($_SESSION['bloggone']);
+}
+?>
 
 
     <!DOCTYPE html>
@@ -356,10 +367,13 @@ https://templatemo.com/tm-529-ramayana
                                                                
                                                                                                                             
                                                             ?>
-                                                
-                                                            <a style="font-size:13px;color:lightpink;" href="/Blogs/viewprocess.php">......read on</a>
-
+                                               
                                                         </p>
+                                                         <br />
+                                                        <form style="text-align:center" method="get" action="/display.php">
+                                                            <input type="hidden" name="blogid" value="<?php echo $row->id ?>" />
+                                                            <button style="border-color:transparent;margin:0px;padding:10px;"><a style="font-size:13px;color:lightpink;" name="view" >read blog</a></button>
+                                                        </form>
                                                     </div>
 
                                                 </div>
@@ -380,18 +394,20 @@ https://templatemo.com/tm-529-ramayana
                         ?>
                         
                         
-                        <!-- Simple Post -->
+                        <!-- Delete Blog -->
                                     <section class="simple-post" style="background-color:rgb(164, 54, 149);padding:10px;opacity:1;margin-top:10px">
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="down-content">
-                                                        <h1 style="color:snow"><?php echo $row->heading; ?></h1>
+                                                        <h1 style="color:snow"><?php echo $row->heading; ?></h1>                                                        
+
                                                         
-
-                                                        </p>
-                                                    </div><button style="background:red;color:white;border-color:red;align-content:flex-end">DELETE</button>
-
+                                                    </div>
+                                                    <form method="get" action="/Blogs/blogdelete.php" style="text-align:right">
+                                                    <input type="hidden" name="delblog" value=" <?php echo $row->id; ?>" />
+                                                    <button style="background:red;color:white;border-color:red;align-content:flex-end">DELETE</button>
+                                                    </form>
                                                 </div>
 
                                             </div>

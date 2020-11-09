@@ -55,7 +55,7 @@
 
                 while($roww = mysqli_fetch_object($db)){
 
-                    if($username == $roww->user or $_SESSION["user"] != $roww->user){
+                    if($username == $roww->user or $_SESSION["user"] == $roww->user){
         
                         $flag = 1;
      

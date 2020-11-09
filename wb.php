@@ -88,13 +88,13 @@
                                             
                                             <p style="color:snow">Enter blog heading:</p>
                                            
-                                                <input type="text" id="fname"  class="form-control" name="bheading" size="70">
+                                                <input type="text" id="fname"  class="form-control" name="bheading" size="70" required="">
                                            
                                             <br>
 
                                             <p style="color:snow">Enter your content:</p>
                                             
-                                                <textarea name="blog" rows="15" class="form-control" id="blog" style="border-radius:0px"></textarea>
+                                                <textarea name="blog" rows="15" class="form-control" id="blog" style="border-radius:0px" required=""></textarea>
                                             
                                             <div class="primary-button">
                                                 <button style="background:#52057b;color:snow;border-color:#52057b">POST</button>
