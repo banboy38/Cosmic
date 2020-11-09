@@ -77,6 +77,10 @@ https://templatemo.com/tm-529-ramayana
                                             <h1 style="color:snow"><?php echo $row->heading; ?></h1>
                                             <p style="color:snow"><?php echo nl2br($row->blog) ?></p>
                                             <br />
+
+                                            <div style="color:snow;text-align:right;font-size:15px">
+                                              <i> ~ by <?php echo $row->user ?> </i>
+                                            </div>
                                                 
                                         </div>
                                     </div>

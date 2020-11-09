@@ -14,11 +14,15 @@
                 {
                     $email = $_POST["email"];
                     mysqli_query($conn, "update people set email = '$email' where user = '$row->user' ;");
+                    mysqli_query($conn, "update content set email = '$email' where user = '$row->user' ;");
                     $_SESSION["email"] = $email;
                     $_SESSION["changemail"] = 1;
                 }
                 else if(isset($_POST["passe"]) &&  $_POST["passe"] != $row->pass && $_SESSION["user"] == $row->user)
                     $_SESSION["changemail"] = 0;
+
+
+
                 
                 if(isset($_POST["passn"]) && $_POST["passn"] == $row->pass && $_SESSION["user"] == $row->user)
                 {
@@ -52,10 +56,10 @@
                 {   
                 $flag = 0;
                 $username = $_POST["username"];
+                $db2 = mysqli_query($conn, "select * from people;");
+                while($roww = mysqli_fetch_object($db2)){
 
-                while($roww = mysqli_fetch_object($db)){
-
-                    if($username == $roww->user or $_SESSION["user"] == $roww->user){
+                    if($username == $roww->user or $_SESSION["user"] == $username){
         
                         $flag = 1;
      
@@ -66,6 +70,7 @@
                 if($flag == 0){
 
                     mysqli_query($conn, "update people set user = '$username' where user = '{$_SESSION['user']}' ;");
+                    mysqli_query($conn, "update content set user = '$username' where user = '{$_SESSION['user']}' ;");
                     $_SESSION["user"] = $username;
                     $_SESSION["changeuser"] = 1;                 
           

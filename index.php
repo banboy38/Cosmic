@@ -92,34 +92,32 @@
                         <section class="services" style="background-color:rgb(164, 54, 149);padding:30px;opacity:1">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="service-item first-item">
+                                    <?php 
+                                        $db = mysqli_query($conn, "select * from content;"); 
+                                        $a = 0;
+                                        while($row = mysqli_fetch_object($db)){
 
-                                            <h4>FIRST BLOG</h4>
-                                            <p>Blog content</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="service-item second-item">
+                                        if($a <4){
+                                    ?>
+                                        
+                                        <div class="col-md-6" style="padding:1px;">
+                                            <a href="/view_blogs.php">
+                                                <div class="service-item first-item">
 
-                                            <h4>SECOND BLOG</h4>
-                                            <p>Blog content</p>
+                                                <h4><?php echo $row->heading; ?></h4>
+                                                
+                                               </div>
+                                            </a>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="service-item third-item">
-
-                                            <h4>THIRD BLOG</h4>
-                                            <p>Blog content</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="service-item fourth-item">
-
-                                            <h4>FOURTH BLOG</h4>
-                                            <p>Blog content</p>
-                                        </div>
-                                    </div>
+                                        
+                                    <?php
+                                        }
+                                        else
+                                            break;
+                                        $a++;
+                                        }
+                                    ?>
+                                    
                                 </div>
                             </div>
                             <div id="firstblog"></div>

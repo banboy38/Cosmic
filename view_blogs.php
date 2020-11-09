@@ -116,6 +116,9 @@ https://templatemo.com/tm-529-ramayana
                                                 
                                                 
                                             </p>
+                                            <div style="color:snow;text-align:right;font-size:15px">
+                                              <i> ~ by <?php echo $row->user ?> </i>
+                                            </div>
                                             <br />
                                                 <form style="text-align:center" method="get" action="/display.php">
                                                     <input type="hidden" name="blogid" value="<?php echo $row->id ?>" />
