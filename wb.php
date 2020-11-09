@@ -7,7 +7,7 @@
 
      if(isset($_SESSION["status"]) && $_SESSION["status"] == "Active"){
         $flag = 0;
-     }
+     
     
 ?>
 
@@ -66,10 +66,8 @@
                                                 <br />1. &lt;i&gt;[Your Content]&lt;/i&gt; - Enclosing your text in this will add an <i>italic</i> style to it.
                                                 <br />2. &lt;b&gt;[Your Content]&lt;/b&gt; - Enclosing your text in this will add an <b>bold</b> style to it.
                                                 <br />3. &lt;u&gt;[Your Content]&lt;/u&gt; - Enclosing your text in this will add an <u>underlined</u> style to it.
-                                                <br />4. &lt;H1&gt;[Your Content]&lt;/H1&gt; - Enclosing your text in this will add a level 1 heading style to it.
-                                                <br />5. &lt;H2&gt;[Your Content]&lt;/H2&gt; - Enclosing your text in this will add a level 2 heading style to it.
-                                                <br />6. &lt;H3&gt;[Your Content]&lt;/H3&gt; - Enclosing your text in this will add a level 3 heading style to it.
-                                                <br />7. &lt;p&gt;[Your Content]&lt;/p&gt; - Enclosing your text in this will put the text into a separate paragraph.
+                                                
+                                                <br />4. &lt;p&gt;[Your Content]&lt;/p&gt; - Enclosing your text in this will put the text into a separate paragraph.
                                                 
                                             </p>
                                          </div>
@@ -141,9 +139,12 @@
                                 <li><a href="index.php">HOME</a></li>
                                 <li><a href="view_blogs.php">VIEW BLOGS</a></li>
                                 <li><a href="faq.php">FAQ</a></li>
+                               <?php if($flag == 0){                     
+                                 ?>
                                 <li>
                                     <a href="wb.php">WRITE BLOG</a>
                                 </li>
+                                <?php } ?>
                                 <?php if($flag == 0){                     
                                 ?>
                                 <li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>
@@ -196,3 +197,15 @@
 
 
         </html>
+
+
+     <?php } 
+    
+            else{
+
+                header("Location: /index.php");
+            }
+    
+    
+    
+    ?> 

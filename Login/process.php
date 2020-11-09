@@ -14,6 +14,8 @@
 
     if($_POST["username"] == $row->user && $_POST["pass"] == $row->pass) {
 
+
+
     $_SESSION["user"] = $row->user;
     $_SESSION["email"] = $row->email;
     $_SESSION["status"]="Active";    
@@ -28,9 +30,10 @@
     }
 
     if($flag == 1)
-    {
-    header("Location: /Login/loginwrong.php");
-    exit;
+    {   
+        $_SESSION["login"] = "Wrong Credentials";
+        header("Location: /Login/loginwrong.php");
+        exit;
     }   
 
  ?>

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     header("Pragma: no-cache");
     header('Cache-Control: no-cache, must-revalidate');
     
@@ -39,9 +39,12 @@
 
    <div class="box" style="width:100%">
 
+     
       <div class="title">LOGIN</div>
 
       <form action="/Login/process.php" method="post">
+
+      
 
       <div class="input">
          <label for="name"></label>

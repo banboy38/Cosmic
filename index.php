@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     include "connection.php";
     
     session_start();
@@ -213,9 +213,12 @@
                                 <li><a href="index.php">HOME</a></li>
                                 <li><a href="view_blogs.php">VIEW BLOGS</a></li>
                                 <li><a href="faq.php">FAQ</a></li>
+                                <?php if($flag == 0){                     
+                                 ?>
                                 <li>
                                     <a href="wb.php">WRITE BLOG</a>
                                 </li>
+                                <?php } ?>
                                 <?php if($flag == 0){                     
                                  ?>
                                 <li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li>

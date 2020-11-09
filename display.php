@@ -12,7 +12,6 @@
         $flag = 0;
      }
     
-     $var = array();
 ?>
 
 
@@ -62,56 +61,15 @@ https://templatemo.com/tm-529-ramayana
                     </div>
                 </header>
                 <br>
-                <!-- Search Box -->
-                <section class="alt">
-                    <div class="col-md-12">
-                        <form method="get" action="#">
-                            <input type="text" name="search" class="form-control"  placeholder="Search..." />
-                        </form>
-                    </div>
-                </section>
+               
+                
 
                 <?php while($row = mysqli_fetch_object($result)){
                 ?>
                         <!-- Simple Post -->
-                        <section class="simple-post" style="background-color:rgb(164, 54, 149);padding:40px;opacity:1;">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="down-content">
-                                            <h1 style="color:snow"><?php echo $row->heading; ?></h1>
-                                            <p style="color:snow">
-
-                                            <?php
-                                                               
-                                                               $example = array($row->blog);
-                                                               
-                                                               
-                                                               $arr = explode(".",$row->blog);
-                                                               $size = sizeof($arr);
-                                                               
-                                                               for($i = 0 ; $i<($size-3); $i++)
-                                                               {
-                                                                   array_pop($arr);
-                                                               }
-                               
-                                                               echo implode(".", $arr);
-                                                               
-                                                               array_push($var, $row->id);
-                                                               
-                                                ?>
-                                                
-                                                <a style="font-size:13px;color:lightpink;" href="/Blogs/viewprocess.php">......read on</a>
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
                 
                 <?php }
-                ?> 
+                ?>
 
               <!--  <section class="simple-post"  style="background-color:rgb(164, 54, 149);padding:40px;opacity:1" >
                     <div class="container-fluid">
@@ -234,12 +192,9 @@ https://templatemo.com/tm-529-ramayana
                             <li><a href="index.php">HOME</a></li>
                             <li><a href="view_blogs.php">VIEW BLOGS</a></li>
                             <li><a href="faq.php">FAQ</a></li>
-                            <?php if($flag == 0){                     
-                                 ?>
-                                <li>
-                                    <a href="wb.php">WRITE BLOG</a>
-                                </li>
-                                <?php } ?>
+                            <li>
+                                <a href="wb.php">WRITE BLOG</a>
+                            </li>
                         <?php if($flag == 0){                     
                         ?><li><a href="myacc.php">MY ACCOUNT</a></li> <li><a href="/Login/logoutmech.php"> LOGOUT</a></li><?php }
                          else if($flag == 1){
@@ -282,4 +237,3 @@ https://templatemo.com/tm-529-ramayana
 
 
 
-</html>

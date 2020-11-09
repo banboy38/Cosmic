@@ -321,12 +321,86 @@ https://templatemo.com/tm-529-ramayana
                     </div>
 
                     <div id="vmb" class="tabcontent">
-                        <h3>Tokyo</h3>
-                        <p>Tokyo is the capital of Japan.</p>
+                        
+                        <?php
+                        $result = mysqli_query($conn, "select * from content;");
+                        while($row = mysqli_fetch_object($result)){
+
+                            if($row->user == $_SESSION["user"]){
+                        ?>
+                        
+                        
+                        <!-- Simple Post -->
+                                    <section class="simple-post" style="background-color:rgb(164, 54, 149);padding:40px;opacity:1;margin-top:10px">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="down-content">
+                                                        <h1 style="color:snow"><?php echo $row->heading; ?></h1>
+                                                        <p style="color:snow">
+
+                                                        <?php
+                                                               
+                                                                           $example = array($row->blog);
+                                                               
+                                                               
+                                                                           $arr = explode(".",$row->blog);
+                                                                           $size = sizeof($arr);
+                                                               
+                                                                           for($i = 0 ; $i<($size-3); $i++)
+                                                                           {
+                                                                               array_pop($arr);
+                                                                           }
+                               
+                                                                           echo implode(".", $arr);
+                                                               
+                                                                                                                            
+                                                            ?>
+                                                
+                                                            <a style="font-size:13px;color:lightpink;" href="/Blogs/viewprocess.php">......read on</a>
+
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                
+                <?php }
+                     }   
+                ?>
                     </div>
                     <div id="dmb" class="tabcontent">
-                        <h3>choti</h3>
-                        <p>ka chota hai.</p>
+                        <?php
+                        $result = mysqli_query($conn, "select * from content;");
+                        while($row = mysqli_fetch_object($result)){
+
+                            if($row->user == $_SESSION["user"]){
+                        ?>
+                        
+                        
+                        <!-- Simple Post -->
+                                    <section class="simple-post" style="background-color:rgb(164, 54, 149);padding:10px;opacity:1;margin-top:10px">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="down-content">
+                                                        <h1 style="color:snow"><?php echo $row->heading; ?></h1>
+                                                        
+
+                                                        </p>
+                                                    </div><button style="background:red;color:white;border-color:red;align-content:flex-end">DELETE</button>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </section>
+                
+                <?php }
+                     }   
+                ?>
                     </div>
 
 
@@ -364,7 +438,7 @@ https://templatemo.com/tm-529-ramayana
                             <li><a href="view_blogs.php">VIEW BLOGS</a></li>
                             <li><a href="faq.php">FAQ</a></li>
                             <li>
-                                <a href="index.php">WRITE BLOG</a>
+                                <a href="wb.php">WRITE BLOG</a>
                             </li>
                             <?php if($flag == 0){                     
                         ?>
