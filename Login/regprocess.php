@@ -16,7 +16,7 @@
         $flag = 1;
      
      }
-     if(strlen($_POST["regpass"]) < 6){
+     if(strlen($_POST["regpass"]) < 8){
 
         $flag = 2; 
   

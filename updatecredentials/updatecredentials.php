@@ -10,16 +10,44 @@
     
         while($row = mysqli_fetch_object($db))
             {
-                if(isset($_POST["passe"]) &&  $_POST["passe"] == $row->pass && $_SESSION["user"] == $row->user)
-                {
-                    $email = $_POST["email"];
-                    mysqli_query($conn, "update people set email = '$email' where user = '$row->user' ;");
-                    mysqli_query($conn, "update content set email = '$email' where user = '$row->user' ;");
-                    $_SESSION["email"] = $email;
-                    $_SESSION["changemail"] = 1;
+                if(isset($_POST["passe"]) && $_POST["passe"] == $row->pass && $_SESSION["user"] == $row->user)
+                {   
+                $flag = 0;
+                $mail = $_POST["email"];
+                $db2 = mysqli_query($conn, "select * from people;");
+                while($rowww = mysqli_fetch_object($db2)){
+
+                    if($mail == $rowww->email or $_SESSION["email"] == $mail){
+        
+                        $flag = 1;
+     
+                    }
+
+     
                 }
-                else if(isset($_POST["passe"]) &&  $_POST["passe"] != $row->pass && $_SESSION["user"] == $row->user)
+                if($flag == 0){
+
+                    mysqli_query($conn, "update people set email = '$mail' where email = '{$_SESSION['email']}' ;");
+                    mysqli_query($conn, "update content set email = '$username' where email = '{$_SESSION['email']}' ;");
+                    $_SESSION["email"] = $mail;
+                    $_SESSION["changemail"] = 1;        
+                             
+          
+                }
+    
+                else if($flag == 1){
+                     $_SESSION["changemail"] = 0;
+                     
+                }
+
+                }
+                else if(isset($_POST["passe"]) and $_POST["passe"] != $row->pass && $_SESSION["user"] == $row->user){
+    
                     $_SESSION["changemail"] = 0;
+                    
+
+                }
+                    
 
 
 
@@ -28,11 +56,13 @@
                 {
                     $name = $_POST["name"];
                     mysqli_query($conn, "update people set name = '$name' where user = '$row->user' ;");
-                    $_SESSION["namech"] = 1;                     
+                    $_SESSION["namech"] = 1;
+                                        
                 }
                 else if(isset($_POST["passn"]) && $_POST["passn"] != $row->pass && $_SESSION["user"] == $row->user)
                 {
-                    $_SESSION["namech"] = 0; 
+                    $_SESSION["namech"] = 0;
+                     
                 }
                 
                                    
@@ -43,16 +73,26 @@
                 {
                     $newpass = $_POST["newpassword1"];
 
-                    if($_POST["newpassword1"] == $_POST["newpassword2"]){
+                    if($_POST["newpassword1"] == $_POST["newpassword2"] && strlen($_POST["newpassword1"]) > 8){
                          mysqli_query($conn, "update people set pass = '$newpass' where user = '$row->user' ;");
                           $_SESSION["changepass"] = 1;
                     }
-                    else
-                           $_SESSION["changeuser"] = 0;
+                    else if(strlen($_POST["newpassword1"]) < 8){
+                          $_SESSION["changepass"] = 2;
+                    }
+                    else if($_POST["newpassword1"] != $_POST["newpassword2"])
+                           $_SESSION["changepass"] = 0;
+
+                   
                 }
+                else if(isset($_POST["oldpassword"]) &&  $_POST["oldpassword"] != $row->pass && $_SESSION["user"] == $row->user){
+                       $_SESSION["changepass"] = 3;
+                       
+                }
+
                 
 
-                if(isset($_POST["username"]) && $_POST["username"] != null and $_POST["passu"] == $row->pass && $_SESSION["user"] == $row->user)
+                if(isset($_POST["username"]) && $_POST["passu"] == $row->pass && $_SESSION["user"] == $row->user)
                 {   
                 $flag = 0;
                 $username = $_POST["username"];
@@ -73,20 +113,20 @@
                     mysqli_query($conn, "update content set user = '$username' where user = '{$_SESSION['user']}' ;");
                     $_SESSION["user"] = $username;
                     $_SESSION["changeuser"] = 1;        
-                    break;         
+                             
           
                 }
     
                 else if($flag == 1){
                      $_SESSION["changeuser"] = 0;
-                     break;
+                     
                 }
 
                 }
-                else if(isset($_POST["username"]) && $_POST["username"] != null and $_POST["passu"] != $row->pass && $_SESSION["user"] == $row->user){
+                else if(isset($_POST["username"]) and $_POST["passu"] != $row->pass && $_SESSION["user"] == $row->user){
     
                     $_SESSION["changeuser"] = 0;
-                    break;
+                    
 
                 }                      
 
@@ -94,10 +134,10 @@
 
         
 
-                  
+     header("Location: /myacc.php"); 
                  
     } 
-        header("Location: /myacc.php")   
+          
     
 ?>
 

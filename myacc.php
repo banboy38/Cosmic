@@ -145,7 +145,7 @@ https://templatemo.com/tm-529-ramayana
                                                 else if(isset($_SESSION["changemail"]) && $_SESSION["changemail"] == 0){
                                             ?>
                                                 <script>
-                                                    alert("E-mail couldn't be changed, wrong password!");
+                                                    alert("E-mail couldn't be changed, wrong password or e-mail already exists!");
                                                 </script>
                                             <?php
                                                 unset($_SESSION['changemail']);
@@ -279,12 +279,31 @@ https://templatemo.com/tm-529-ramayana
                                              else if(isset($_SESSION["changepass"]) && $_SESSION["changepass"] == 0){
                                             ?>
                                                 <script>
-                                                    alert("Password couldn't be changed, wrong credentials!");
+                                                    alert("Password don't match!");
                                                 </script>
                                             <?php
                                                 unset($_SESSION['changepass']);
                                                 }
+                                                else if(isset($_SESSION["changepass"]) && $_SESSION["changepass"] == 2){
                                             ?>
+                                                <script>
+                                                    alert("Password should be more than 8 characters!");
+                                                </script>
+                                            <?php
+                                                unset($_SESSION['changepass']);
+                                                }
+                                                else if(isset($_SESSION["changepass"]) && $_SESSION["changepass"] == 3){
+                                            ?>
+                                                <script>
+                                                    alert("Wrong password!");
+                                                </script>
+                                            <?php
+                                                unset($_SESSION['changepass']);
+                                                }
+
+                                            ?>
+
+                                            
                                         </div>
 
 
