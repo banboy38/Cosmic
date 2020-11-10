@@ -5,7 +5,8 @@
 
      session_start();
      
-     
+     $db = "delete from content where user = '{$_SESSION["user"]}' ";
+     mysqli_query($conn, $db);
 
      
      $flag = 0;
@@ -30,6 +31,9 @@
         
     
      }
+
+     
+     
 
 
 

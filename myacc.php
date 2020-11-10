@@ -306,8 +306,8 @@ https://templatemo.com/tm-529-ramayana
                                         </fieldset>
                         </div><br/>
                         <h4 style="color:Tomato; text-align:left;font-size:small">ONCE YOU PRESS THE BUTTON BELOW YOU CANNOT RETRIEVE YOUR ACCOUNT. YOU'LL HAVE TO CREATE A NEW ACCOUNT.</h4>
-                        <br/><div style="margin-left: 15px;" class="primary-button" >
-                             <button>SUBMIT</button>
+                        <br/><div style="margin-left: 15px;text-align:left" class="primary-button" >
+                             <button style="background:red;color:white;border-color:red;align-content:flex-end">DELETE</button>
                         </div>
                         </form>
                                             <?php
