@@ -26,7 +26,7 @@
             <meta name="author" content="">
             <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-            <title>Home</title>
+            <title>Write Blog</title>
 
             <!-- Bootstrap core CSS -->
             <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
