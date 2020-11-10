@@ -72,15 +72,23 @@
                     mysqli_query($conn, "update people set user = '$username' where user = '{$_SESSION['user']}' ;");
                     mysqli_query($conn, "update content set user = '$username' where user = '{$_SESSION['user']}' ;");
                     $_SESSION["user"] = $username;
-                    $_SESSION["changeuser"] = 1;                 
+                    $_SESSION["changeuser"] = 1;        
+                    break;         
           
                 }
     
                 else if($flag == 1){
                      $_SESSION["changeuser"] = 0;
+                     break;
                 }
 
-                }                       
+                }
+                else if(isset($_POST["username"]) && $_POST["username"] != null and $_POST["passu"] != $row->pass && $_SESSION["user"] == $row->user){
+    
+                    $_SESSION["changeuser"] = 0;
+                    break;
+
+                }                      
 
         }  
 
