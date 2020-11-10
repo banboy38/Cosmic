@@ -305,7 +305,7 @@ https://templatemo.com/tm-529-ramayana
                                         <input name="passdel" type="password" class="form-control" id="name" placeholder="" required="">
                                         </fieldset>
                         </div><br/>
-                        <h4 style="color:Tomato; text-align:left;font-size:small">ONCE YOU PRESS THE BUTTON BELOW YOU CANNOT RETRIEVE YOUR ACCOUNT. YOU'LL HAVE TO CREATE A NEW ACCOUNT.</h4>
+                        <h4 style="color:Tomato; text-align:left;font-size:small">ONCE YOU PRESS THE BUTTON BELOW YOU CANNOT RETRIEVE YOUR ACCOUNT. ALL YOUR BLOGS AND THEIR CONTENT WILL BE DELETED. YOU'LL HAVE TO CREATE A NEW ACCOUNT.</h4>
                         <br/><div style="margin-left: 15px;text-align:left" class="primary-button" >
                              <button style="background:red;color:white;border-color:red;align-content:flex-end">DELETE</button>
                         </div>
