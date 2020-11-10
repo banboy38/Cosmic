@@ -22,6 +22,18 @@
                                             ?>
 
 
+                                            <?php
+                                                if(isset($_SESSION["sub"])){
+                                            ?>
+                                                  <script>
+                                                    alert("Subscribed!");
+                                                  </script>
+                                            <?php 
+                                                unset($_SESSION['sub']);
+                                                }
+                                            ?>
+
+
 
         <!DOCTYPE html>
         <html lang="en" style="scroll-behavior: smooth">
@@ -190,7 +202,7 @@
                                         <div class="left-content">
                                             <h2 style="color:snow">SUBSCRIBE TO OUR SITE</h2><br />
                                             <p style="color:whitesmoke">E-mail ID</p>
-                                            <form>
+                                            <form method="get" action="/Subscribe/sub.php">
                                                 <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="" data-validate="Enter e-mail" style="border-radius:0px"><br />
 
                                                 <p style="color:whitesmoke">Phone number</p>
@@ -198,8 +210,9 @@
                                                 <input name="phone" type="text" class="form-control" id="phone" placeholder="Your phone number..." required="" data-validate="Enter phone number" style="border-radius:0px">
 
                                                 <div class="primary-button">
-                                                    <a style="background:#52057b;color:snow;border-color:#52057b" href="">SUBSCRIBE</a>
+                                                    <button style="background:#52057b;color:snow;border-color:#52057b" href="">SUBSCRIBE</button>
                                                 </div>
+
                                             </form>
                                         </div>
                                     </div>

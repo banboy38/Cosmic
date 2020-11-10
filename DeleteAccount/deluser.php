@@ -5,8 +5,7 @@
 
      session_start();
      
-     $db = "delete from content where user = '{$_SESSION["user"]}' ";
-     mysqli_query($conn, $db);
+    
 
      
      $flag = 0;
@@ -16,16 +15,21 @@
      if($_SESSION["user"] == $row->user && $_POST["passdel"] == $row->pass){
 
         $_SESSION["status"] = "Passive";
+
         $name = $_SESSION['user'];
         $func = mysqli_query($conn, "delete from people where user = '$name' ");
+
+        $db = "delete from content where user = '{$_SESSION["user"]}';";
+        mysqli_query($conn, $db);
+
         unset($_SESSION['user']);
         unset($_SESSION['email']);
 
         $_SESSION["del"] = 1;
-
-        header("Location: /myacc.php");
         $flag = 1;
-        break;
+        header("Location: /myacc.php");
+        
+        exit;
      
      }
         
@@ -42,6 +46,8 @@
         $_SESSION["del"] = 0;
 
         header("Location : /myacc.php");
+        
+        exit;
         
     }
    
