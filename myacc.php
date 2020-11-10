@@ -145,7 +145,7 @@ https://templatemo.com/tm-529-ramayana
                                                 else if(isset($_SESSION["changemail"]) && $_SESSION["changemail"] == 0){
                                             ?>
                                                 <script>
-                                                    alert("E-mail couldn't be changed, wrong password or e-mail already exists!");
+                                                    alert("E-mail couldn't be changed, wrong password or e-mail is already registered!");
                                                 </script>
                                             <?php
                                                 unset($_SESSION['changemail']);
