@@ -42,6 +42,15 @@
      
       <div class="title">LOGIN</div>
 
+       <?php if(isset($_SESSION["smol"])){ ?>
+      <div style="color:red">Password should be more than 6 characters</div>
+      <?php } unset($_SESSION["smol"]);?>
+
+       <?php if(isset($_SESSION["mailgone"])){ ?>
+      <div style="color:red">Email is already registered.</div>
+      <?php } unset($_SESSION["mailgone"]);?>
+
+
       <form action="/Login/process.php" method="post">
 
       

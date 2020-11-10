@@ -16,6 +16,17 @@
         $flag = 1;
      
      }
+     if(strlen($_POST["regpass"]) < 6){
+
+        $flag = 2; 
+  
+     }
+     if($_POST["regemail"] == $row->email){
+
+        $flag = 3;
+
+     }
+
 
      
      }
@@ -41,7 +52,20 @@
      
     }
     
-    else{
+    else if($flag == 1){
          header("Location: /Login/loginuserexists.php");
+         exit;
+     }
+     else if($flag == 3){
+        $_SESSION["mailgone"] = 1;
+        header("Location: /Login/login.php");
+        exit;
+     }
+
+
+     else if($flag == 2){
+        $_SESSION["smol"] = 1;
+        header("Location: /Login/login.php");
+        exit;
      }
 ?>
