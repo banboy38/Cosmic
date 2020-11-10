@@ -32,6 +32,15 @@
         exit;
      
      }
+     else if($_SESSION["user"] == $row->user && $_POST["passdel"] != $row->pass){
+         
+         $_SESSION["del"] = 0;
+
+        header("Location : /myacc.php");
+
+        exit;
+
+     }
         
     
      }
@@ -41,15 +50,6 @@
 
 
 
-     if($flag == 0){
-
-        $_SESSION["del"] = 0;
-
-        header("Location : /myacc.php");
-        
-        exit;
-        
-    }
    
     
    

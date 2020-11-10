@@ -329,16 +329,9 @@ https://templatemo.com/tm-529-ramayana
                              <button style="background:red;color:white;border-color:red;align-content:flex-end">DELETE</button>
                         </div>
                         </form>
-                                            <?php
-                                                if(isset($_SESSION["del"]) && $_SESSION["del"] == 1){
-                                            ?>
-                                                <script>
-                                                    alert("Account deletion succesful!");
-                                                </script>
-                                            <?php 
-                                                unset($_SESSION['del']);
-                                             }
-                                             else if(isset($_SESSION["del"]) && $_SESSION["del"] == 0){
+                                            
+                                            <?php                                                 
+                                             if(isset($_SESSION["del"]) && $_SESSION["del"] == 0){
                                             ?>
                                                 <script>
                                                     alert("Account couldn't be deleted, wrong credentials!");
