@@ -16,5 +16,10 @@ ____
 ## Setup on local system
 * Clone the repos on your system
 * On command prompt, navigate to the folder where the repos is cloned using cd command <br>
-  ```cd <address of the folder where index.php exists>```
-            
+  ```cd <address of the folder in system where index.php exists>```
+* If the repos exists on a drive other than C drive, enter the following piece of code before the above one <br>
+  ```<drive name>:```
+* For example, if the address is **F:\GitHub\Cosmic**, then the commands will be <br>
+  ```F:```
+  ```cd F:\GitHub\Cosmic```
+*
