@@ -50,6 +50,10 @@
       <div style="color:red">Email is already registered.</div>
       <?php } unset($_SESSION["mailgone"]);?>
 
+       <?php if(isset($_SESSION["@"])){ ?>
+      <div style="color:red">Email doesn't have @ sign!</div>
+      <?php } unset($_SESSION["@"]);?>
+
 
       <form action="/Login/process.php" method="post">
 

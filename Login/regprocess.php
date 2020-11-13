@@ -26,7 +26,11 @@
         $flag = 3;
 
      }
+     if(strpos($_POST["regemail"], "@") == false){
 
+        $flag = 4;
+
+     }
 
      
      }
@@ -65,6 +69,12 @@
 
      else if($flag == 2){
         $_SESSION["smol"] = 1;
+        header("Location: /Login/login.php");
+        exit;
+     }
+
+     else if($flag == 4){
+        $_SESSION["@"] = 1;
         header("Location: /Login/login.php");
         exit;
      }
