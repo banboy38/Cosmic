@@ -8,18 +8,21 @@
      if(isset($_SESSION["status"]) && $_SESSION["status"] == "Active"){
         $flag = 0;
          
-?>
-<?php
- if(isset($_SESSION['bloggone']) && $_SESSION['bloggone'] == 1){
-?>
-    <script>
-        alert("Blog has been deleted!");
-    </script>
+        ?>
+        <?php
+         if(isset($_SESSION['bloggone']) && $_SESSION['bloggone'] == 1){
+        ?>
+            <script>
+                alert("Blog has been deleted!");
+            </script>
 
-<?php
-    unset($_SESSION['bloggone']);
-}
-?>
+        <?php
+            unset($_SESSION['bloggone']);
+        }
+        ?>
+
+        <?php
+                                          
 
 
     <!DOCTYPE html>

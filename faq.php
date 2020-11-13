@@ -9,7 +9,19 @@
         $flag = 0;
      }
     
+
 ?>
+
+                                            <?php
+                                            if(isset($_SESSION["supp"])){
+                                            ?>
+                                                  <script>
+                                                    alert("Query submitted!");
+                                                  </script>
+                                            <?php 
+                                                unset($_SESSION['supp']);
+                                                }
+                                            ?>
 
 
 <!DOCTYPE html>
