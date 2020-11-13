@@ -23,7 +23,7 @@ ____
 * For example, if the address is **F:\GitHub\Cosmic**, then the commands will be <br>
   ```F:``` <br>
   ```cd F:\GitHub\Cosmic```
-* After change of directories, type this into the command prompt
+* After change of directories, type this into the command prompt <br>
   ```php -S localhost:5000```<br>
   **Imp - php version 7 or more must be installed beforehand**
 * Keeping the command prompt open/minimized, open your browser window and type http://localhost:5000 into the address bar.
