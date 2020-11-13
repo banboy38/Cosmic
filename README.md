@@ -13,4 +13,8 @@ ____
 * PHP
 * SQL
 * JavaScript
+## Setup on local system
+* Clone the repos on your system
+* On command prompt, navigate to the folder where the repos is cloned using cd command
+  ```cd <address of the folder where index.php exists>```
             
