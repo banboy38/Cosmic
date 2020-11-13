@@ -23,8 +23,8 @@ ____
 * For example, if the address is **F:\GitHub\Cosmic**, then the commands will be <br>
   ```F:``` <br>
   ```cd F:\GitHub\Cosmic```
-* After change of directories, type this into the command prompt*
-  ```php -S localhost:5000```<br>
+* After change of directories, type this into the command prompt <br>
+  ```php -S localhost:5000```<br><br>
   **Imp - php version 7 or more must be installed beforehand**
 * Keeping the command prompt open/minimized, open your browser window and type http://localhost:5000 into the address bar.
 * Now the site is live on your local system, any changes made to the repos made on your system will be reflected on the site.
