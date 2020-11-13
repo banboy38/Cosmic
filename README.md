@@ -4,6 +4,7 @@ ____
 * Team name - Cosmic
 * Team members - Anirban Aditya Halder, Abhishek Purty, Amman Mohit Minz, Justin Arpit Indwar
 * Deployment Link - http://tidbits.rf.gd/
+* E-mail - nabovtl@gmail.com
 ## Features
 * Fully dynamic blogging website with login/logout, write/delete blogs, edit details features.
 * Login/Register for the complete experience!
@@ -28,4 +29,4 @@ ____
 * Keeping the command prompt open/minimized, open your browser window and type http://localhost:5000 into the address bar.
 * Now the site is live on your local system, any changes made to the repos made on your system will be reflected on the site.
 
-Of course it's much much easier to just view the site on this link - http://tidbits.rf.gd/
+  Of course it's much much easier to just view the site on this link - http://tidbits.rf.gd/
