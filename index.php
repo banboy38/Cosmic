@@ -102,6 +102,7 @@
 
                         <!-- FAMOUS BLOGS -->
                         <section class="services" style="background-color:rgb(164, 54, 149);padding:30px;opacity:1">
+                            <h2 style="color:snow">Check out our blogs</h2><br />
                             <div class="container-fluid">
                                 <div class="row">
                                     <?php 
